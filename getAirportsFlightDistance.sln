@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAirportsFlightDistance", "getAirportsFlightDistance\getAirportsFlightDistance.csproj", "{D1343D66-CF50-4D41-93BE-A81817EF35DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAirportsFlightDistance.Tests", "getAirportsFlightDistance.Tests\getAirportsFlightDistance.Tests.csproj", "{99AC65DC-0A59-4C5E-AF80-0F91C0DCDB23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1343D66-CF50-4D41-93BE-A81817EF35DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1343D66-CF50-4D41-93BE-A81817EF35DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1343D66-CF50-4D41-93BE-A81817EF35DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1343D66-CF50-4D41-93BE-A81817EF35DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AC65DC-0A59-4C5E-AF80-0F91C0DCDB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AC65DC-0A59-4C5E-AF80-0F91C0DCDB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AC65DC-0A59-4C5E-AF80-0F91C0DCDB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AC65DC-0A59-4C5E-AF80-0F91C0DCDB23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
