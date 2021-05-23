@@ -45,6 +45,8 @@ namespace getAirportsFlightDistance
             
             services.AddSingleton<IAirportDescriptionService, CTeleportAirportDescriptionService>();
 
+            services.AddSingleton<ICachedAirportDescriptionService, CachedAirportDescriptionService>();
+
             services.AddSingleton<IAirportFlightDistanceService, AirportFlightDistanceService>();
         }
 

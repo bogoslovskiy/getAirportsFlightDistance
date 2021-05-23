@@ -6,9 +6,9 @@ namespace getAirportsFlightDistance.Services
 
     public class AirportFlightDistanceService : IAirportFlightDistanceService
     {
-        private readonly IAirportDescriptionService airportDescriptionService;
+        private readonly ICachedAirportDescriptionService airportDescriptionService;
 
-        public AirportFlightDistanceService(IAirportDescriptionService airportDescriptionService)
+        public AirportFlightDistanceService(ICachedAirportDescriptionService airportDescriptionService)
         {
             this.airportDescriptionService = airportDescriptionService;
         }

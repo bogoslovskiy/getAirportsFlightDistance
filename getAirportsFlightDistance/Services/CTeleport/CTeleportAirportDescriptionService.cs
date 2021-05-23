@@ -8,7 +8,6 @@ namespace getAirportsFlightDistance.Services.CTeleport
     using getAirportsFlightDistance.Services.CTeleport.Models;
     using getAirportsFlightDistance.Services.Models;
 
-    // TODO: make in-memory cache wrapper service
     public class CTeleportAirportDescriptionService : IAirportDescriptionService
     {
         private readonly CTeleportAirportDescriptionServiceConfiguration configuration;
@@ -27,12 +26,11 @@ namespace getAirportsFlightDistance.Services.CTeleport
             using HttpClient httpClient = new();
 
             HttpResponseMessage response = await httpClient.GetAsync(
-                requestUri: new Uri(baseUri: configuration.Uri, relativeUri: iata)
+                requestUri: new Uri(baseUri: configuration.Uri, relativeUri: iata.ToUpper())
             );
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                // TODO: cancellation token
                 string airportDescriptionJson = await response.Content.ReadAsStringAsync();
                 
                 CTeleportAirportDescriptionDto airportDescriptionDto =
