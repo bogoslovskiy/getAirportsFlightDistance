@@ -1,16 +1,19 @@
 namespace getAirportsFlightDistance.Services
 {
+    using System;
     using System.Threading.Tasks;
     using Geolocation;
     using getAirportsFlightDistance.Services.Models;
 
     public class AirportFlightDistanceService : IAirportFlightDistanceService
     {
+        // Для примера кэширования, здесь должен быть IAirportDescriptionService.
         private readonly ICachedAirportDescriptionService airportDescriptionService;
 
         public AirportFlightDistanceService(ICachedAirportDescriptionService airportDescriptionService)
         {
-            this.airportDescriptionService = airportDescriptionService;
+            this.airportDescriptionService =
+                airportDescriptionService ?? throw new ArgumentNullException(nameof(airportDescriptionService));
         }
 
         public async Task<GetAirportFlightDistanceInMilesResult> GetDistanceInMiles(GetAirportFlightDistanceInMilesParameters parameters)

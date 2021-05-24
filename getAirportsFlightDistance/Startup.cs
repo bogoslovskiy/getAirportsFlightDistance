@@ -39,6 +39,8 @@ namespace getAirportsFlightDistance
             
             FluentValidation.ValidatorOptions.Global.PropertyNameResolver = FluentValidationJsonPropertyNameResolver.ResolvePropertyName;
 
+            services.AddHttpClient();
+            
             services.AddSingleton(GetCTeleportAirportDescriptionServiceConfiguration());
             
             services.AddSingleton<ICTeleportAirportDescriptionMapper, CTeleportAirportDescriptionMapper>();

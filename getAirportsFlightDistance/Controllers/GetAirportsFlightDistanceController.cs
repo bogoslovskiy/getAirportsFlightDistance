@@ -16,7 +16,8 @@ namespace getAirportsFlightDistance.Controllers
 
         public GetAirportsFlightDistanceController(IAirportFlightDistanceService airportFlightDistanceService)
         {
-            this.airportFlightDistanceService = airportFlightDistanceService;
+            this.airportFlightDistanceService =
+                airportFlightDistanceService ?? throw new ArgumentNullException(nameof(airportFlightDistanceService));
         }
 
         [HttpGet]

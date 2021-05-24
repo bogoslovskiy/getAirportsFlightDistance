@@ -22,7 +22,8 @@ namespace getAirportsFlightDistance.Services
 
         public CachedAirportDescriptionService(IAirportDescriptionService airportDescriptionService)
         {
-            this.airportDescriptionService = airportDescriptionService;
+            this.airportDescriptionService =
+                airportDescriptionService ?? throw new ArgumentNullException(nameof(airportDescriptionService));
         }
 
         public async Task<AirportDescription> GetDescription(string iata)
