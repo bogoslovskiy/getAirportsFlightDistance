@@ -11,13 +11,11 @@ namespace getAirportsFlightDistance.Models
             
             RuleFor(x => x.DepartureAirportIataCode)
                 .NotNull()
-                .WithMessage(shouldBeThreeLetterIataCodeMessage)
                 .Length(3)
                 .WithMessage(shouldBeThreeLetterIataCodeMessage);
             
             RuleFor(x => x.ArrivalAirportIataCode)
                 .NotNull()
-                .WithMessage(shouldBeThreeLetterIataCodeMessage)
                 .Length(3)
                 .WithMessage(shouldBeThreeLetterIataCodeMessage);
         }
